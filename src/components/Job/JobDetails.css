@@ -1,0 +1,125 @@
+.jobDetail {
+  position: relative;
+  min-height: 100vh;
+  background: url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1470&q=80') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 20px;
+  font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #ffffff;
+}
+
+.jobDetail .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(20, 20, 20, 0.85); /* darker overlay */
+  z-index: 1;
+  border-radius: 20px;
+}
+
+.jobDetail .container {
+  position: relative;
+  z-index: 10;
+  max-width: 960px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 50px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.jobDetail h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+}
+
+.jobDetail .banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px 40px;
+}
+
+.jobDetail .banner p {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #e0f7fa;
+}
+
+.jobDetail .banner p strong {
+  display: block;
+  color: #ffffff;
+  margin-bottom: 4px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.jobDetail .banner p span {
+  font-weight: 400;
+  color: #fefefe;
+  font-size: 1.05rem;
+}
+
+.applyBtn {
+  background-color: #1db954;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 16px rgba(29, 185, 84, 0.5);
+  width: fit-content;
+  margin: auto;
+}
+
+.applyBtn:hover {
+  background-color: #169e47;
+  box-shadow: 0 10px 25px rgba(23, 161, 68, 0.6);
+}
+
+.backBtn {
+  background: transparent;
+  border: 2px solid #1db954;
+  color: #1db954;
+  padding: 10px 24px;
+  font-size: 1rem;
+  border-radius: 40px;
+  cursor: pointer;
+  align-self: flex-start;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.backBtn:hover {
+  background-color: #1db954;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .jobDetail .container {
+    padding: 30px 25px;
+  }
+
+  .jobDetail h3 {
+    font-size: 2rem;
+  }
+
+  .applyBtn {
+    font-size: 1rem;
+    padding: 10px 24px;
+  }
+
+  .jobDetail .banner {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,142 @@
+.myJobs-background {
+  background-image: url('/images/jobs-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+  position: relative; /* Added */
+  z-index: 1;          /* Added */
+}
+
+.myJobs-container {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 20px;
+  max-width: 1100px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  position: relative; /* Added */
+  z-index: 2;          /* Added */
+}
+
+.myJobs-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.myJobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 20px;
+  align-items: stretch;
+}
+
+.myJob-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.myJob-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+.myJob-card h3 {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.job-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.delete-btn,
+.edit-btn,
+.expire-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #e60000;
+}
+
+.edit-btn {
+  background-color: #4da6ff;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #007acc;
+}
+
+.expire-btn {
+  background-color: #f0ad4e;
+  color: white;
+  margin-top: 10px;
+  position: relative; /* Added */
+  z-index: 3;          /* Added */
+}
+
+.expire-btn.reopen {
+  background-color: #5cb85c;
+}
+
+.status-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  background-color: #007bff;
+  padding: 4px 10px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-top: 8px;
+}
+
+.status-label.expired {
+  background-color: #999;
+}
+
+.status-label.active {
+  background-color: #28a745;
+}
+
+@media (max-width: 480px) {
+  .job-buttons {
+    flex-direction: column;
+  }
+} 
+.expire-btn:hover {
+  background-color: #ec971f;
+}
+.expire-btn.reopen:hover {
+  background-color: #4cae4c;
+}
+

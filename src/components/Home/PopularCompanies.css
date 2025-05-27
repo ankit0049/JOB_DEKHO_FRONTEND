@@ -1,0 +1,103 @@
+.companies {
+  background: #f9fafb;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.companies .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+}
+
+.companies h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d5649;
+  text-align: center;
+  letter-spacing: 1.1px;
+}
+
+.companies .banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  width: 100%;
+}
+
+.companies .card {
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgb(45 86 73 / 0.15);
+  padding: 25px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.companies .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 14px 30px rgb(45 86 73 / 0.25);
+}
+
+.companies .content {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.companies .icon {
+  background: #e9f9ff;
+  color: #2d5649;
+  font-size: 36px;
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 8px rgb(45 86 73 / 0.1);
+}
+
+.companies .text h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #2d5649;
+}
+
+.companies .text .location {
+  font-size: 0.95rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+.companies button.open-positions {
+  background: linear-gradient(135deg, #34d399, #059669);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  padding: 12px 0;
+  margin-top: 25px;
+  width: 100%;
+  letter-spacing: 0.05em;
+  box-shadow: 0 6px 15px rgb(5 150 105 / 0.35);
+  transition: background-color 0.3s ease;
+}
+
+.companies button.open-positions:hover {
+  background: linear-gradient(135deg, #059669, #065f46);
+}
+
+@media (max-width: 480px) {
+  .companies .container {
+    padding: 0 15px;
+  }
+}

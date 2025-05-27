@@ -1,0 +1,390 @@
+:root {
+  --color-indigo: #4f46e5;
+  --color-indigo-dark: #4338ca;
+  --color-red: #ef4444;
+  --color-red-dark: #b91c1c;
+  --color-bg-light: #f9fbfd;
+  --color-bg-indigo-light: #e0e7ff;
+  --color-text-dark: #2d3748;
+  --color-text-muted: #718096;
+  --color-text-secondary: #4a5568;
+  --font-primary: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.my_applications {
+  background: url('https://wallpaperaccess.com/full/340434.png') no-repeat center center fixed;
+  padding: 50px 20px;
+  min-height: 900px;
+  font-family: var(--font-primary);
+}
+
+.my_applications .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background: white;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(99, 102, 241, 0.15);
+}
+
+.my_applications h1 {
+  font-size: 2.5rem;
+  color: var(--color-text-dark);
+  text-align: center;
+}
+
+.my_applications h4 {
+  text-align: center;
+  color: var(--color-text-muted);
+  font-weight: 400;
+}
+
+/* Job Seeker Card & Employer Card - unified with modern style */
+.job_seeker_card {
+  display: flex;
+  align-items: center;
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.3s ease;
+}
+
+.job_seeker_card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.job_seeker_card .detail {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #374151;
+  font-weight: 500;
+}
+
+.job_seeker_card .detail span {
+  font-weight: 700;
+  color: var(--color-indigo);
+}
+
+.job_seeker_card .resume {
+  flex: 1;
+  position: relative;
+  height: 230px;
+  margin-left: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(79, 70, 229, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.job_seeker_card .resume img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  will-change: transform;
+}
+
+.job_seeker_card .resume:hover img {
+  transform: scale(1.05);
+}
+
+.job_seeker_card .btn_area {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20px;
+}
+
+.job_seeker_card .btn_area button {
+  background: var(--color-red);
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 120px;
+  min-height: 48px;
+}
+
+.job_seeker_card .btn_area button:hover {
+  background: var(--color-red-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1150px) {
+  .job_seeker_card {
+    flex-wrap: wrap;
+  }
+  .job_seeker_card .detail,
+  .job_seeker_card .resume,
+  .job_seeker_card .btn_area {
+    flex: 1 1 100%;
+    margin-left: 0;
+    margin-top: 15px;
+  }
+  .job_seeker_card .resume {
+    height: 100px;
+  }
+  .job_seeker_card .btn_area {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  .job_seeker_card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .job_seeker_card .resume {
+    width: 100%;
+    height: 180px;
+    margin: 15px 0;
+  }
+  .job_seeker_card .btn_area {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+/* Detail grid used in other contexts if needed */
+.detail {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 20px;
+  margin-bottom: 20px;
+}
+
+.detail p {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+}
+
+.detail span {
+  font-weight: 600;
+  color: var(--color-text-dark);
+}
+
+/* Resume image for smaller uses */
+.resume {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.resume img {
+  max-width: 250px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.resume img:hover {
+  transform: scale(1.05);
+}
+
+/* Button area generic */
+.btn_area {
+  display: flex;
+  justify-content: center;
+}
+
+.btn_area button {
+  background-color: var(--color-indigo);
+  color: white;
+  font-size: 1rem;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  min-width: 120px;
+  min-height: 48px;
+}
+
+.btn_area button:hover {
+  background-color: var(--color-indigo-dark);
+}
+
+/* Container and form styling */
+.application {
+  display: flex;
+  flex-direction: column;
+  background: var(--color-bg-light);
+  font-family: var(--font-primary);
+  color: #333;
+}
+
+.application .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.application .container form {
+  width: 100%;
+  max-width: 600px;
+  padding: 40px 30px;
+  gap: 30px;
+  display: flex;
+  flex-direction: column;
+  background: #f7f8fa;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px #e2e8f0;
+}
+
+.application .container form input,
+.application .container form textarea {
+  font-size: 18px;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1.5px solid #cbd5e1;
+  background: #ffffff;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  font-weight: 500;
+  color: #1f2937;
+  resize: vertical;
+}
+
+.application .container form input:focus,
+.application .container form textarea:focus {
+  outline: none;
+  border-color: var(--color-indigo);
+  box-shadow: 0 0 8px rgba(79, 70, 229, 0.5);
+  background: #fff;
+}
+
+.application .container form button {
+  background-color: var(--color-indigo);
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  padding: 14px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.35s ease;
+  box-shadow: 0 5px 15px rgba(79, 70, 229, 0.3);
+  min-width: 120px;
+  min-height: 48px;
+}
+
+.application .container form button:hover {
+  background-color: var(--color-indigo-dark);
+  box-shadow: 0 8px 20px rgba(67, 56, 202, 0.5);
+}
+
+/* Responsive container */
+@media (max-width: 768px) {
+  .application .container {
+    padding: 40px 10px;
+    max-width: 100%;
+  }
+
+  .application .container form {
+    padding: 30px 20px;
+  }
+
+  .detail {
+    grid-template-columns: 1fr;
+  }
+
+  .resume img {
+    max-width: 13%;
+  }
+}
+
+
+
+.resume-modal {
+  width: 100%;
+  display: flex;
+  background: #00000085;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.resume-modal .modal-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.resume-modal .modal-content .close {
+  position: absolute;
+  right: 36px;
+  top: 35px;
+  font-size: 50px;
+  color: #d9534f;
+}
+.resume-modal .modal-content .close:hover {
+  cursor: pointer;
+}
+.resume-modal .modal-content img {
+  max-width: 650px;
+  max-height: 350px;
+}
+@media (max-width: 1130px) {
+  .resume-modal {
+    z-index: 11;
+  }
+}
+
+.resume-modal {
+  width: 100%;
+  display: flex;
+  background: #00000085;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.resume-modal .modal-content {
+  position: relative;
+  max-width: 550px;
+  max-height: 450px;
+  background: white; /* optional for visibility */
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.resume-modal .modal-content .close {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-size: 30px;
+  color: #d9534f;
+  cursor: pointer;
+}
+
+.resume-modal .modal-content img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
